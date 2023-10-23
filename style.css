@@ -1,0 +1,81 @@
+.title {
+    display: inline-block;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+    font-size: 70px;
+    text-align: center;
+    vertical-align: middle; /* Vertically center the text */
+    border: 1px solid #000; /* Add a solid black border */
+    width: 100%;
+  }
+  
+/* Style the book cards */
+.book-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block; /* Display cards inline */
+  width: 200px; /* Set a fixed width for square shape */
+  min-height: 200px; /* Set a minimum height for square shape */
+  text-align: center;
+  transition: transform 0.1s, border-width 0.1s; /* Add transitions for scaling and border */
+}
+
+/* Scale the card slightly larger on hover and make the border bold */
+.book-card:hover {
+  transform: scale(1.05); /* Increase the size by 5% on hover */
+  border-width: 4px; /* Make the border bold on hover */
+  border-color:  #007BFF
+}
+
+
+/* Style the delete button (X symbol) */
+.delete-button {
+  background-color: #87CEFA; /* Lighter blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 50%;
+  padding: 5px 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 5px; /* Add some spacing between the "X" button and book info */
+  transition: transform 0.2s, background-color 0.2s; /* Add transitions for scaling and color change */
+}
+
+/* Increase the button size and change color to normal blue on hover */
+.delete-button:hover {
+  transform: scale(1.2); /* Increase the size by 20% on hover */
+  background-color: #007BFF; /* Normal blue color on hover */
+}
+
+
+  /* Styles for the hidden form */
+  .add-book-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  
+
+/* Animation for sliding in the form */
+.slide-in {
+  animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 0;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+  </head>
+
+  <body>
+
+    <div class="title">Library of Ohara</div>
+
+    <div class="main">
+    <div class="books">
+      <h2>Books in Library:</h2>
+      <ul id="book-list"></ul>
+    </div>
+    <div class="sidebar">
+        <button class="add-book" onclick="openForm()">Add Book</button>
+    </div>
+    </div>
+
+
+     <!-- Hidden form for adding a book -->
+     <form id="add-book-form" class="add-book-form">
+      <h2>Add a Book:</h2>
+      <input type="text" id="title" placeholder="Title">
+      <input type="text" id="author" placeholder="Author">
+      <input type="number" id="pages" placeholder="Number of Pages">
+      <label for="read-status"></label>
+      <select id="read-status">
+        <option value="read">Read</option>
+        <option value="unread">Unread</option>
+      </select>
+      <button class="submit-button" onclick="addBookToLibrary(event)">Submit</button>
+      <button type = "button" class = "cancel-button" onclick="closeForm()">Cancel</button>
+    </form>
+    
+
+  </body>
